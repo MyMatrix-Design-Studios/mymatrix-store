@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HMNT2W3WN2"></script>
+  <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-HMNT2W3WN2');</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — MyMatrix Store</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/store.css">
+</head>
+<body data-page="checkout">
+  <header id="site-header"></header>
+  <main class="wrap" id="checkout-root">
+    <div class="checkout">
+      <form id="checkout-form" novalidate>
+        <h1>Check<span class="thin">out</span></h1>
+
+        <fieldset class="fieldset">
+          <legend>Contact</legend>
+          <div class="fields">
+            <div class="field full"><input id="name" name="name" placeholder=" " autocomplete="name" required><label for="name">Full name</label><p class="err">Please enter your name.</p></div>
+            <div class="field"><input id="email" name="email" type="email" placeholder=" " autocomplete="email" required><label for="email">Email</label><p class="err">Enter a valid email — apps are delivered here.</p></div>
+            <div class="field"><input id="phone" name="phone" type="tel" placeholder=" " autocomplete="tel" pattern="[+0-9 ]{10,15}" required><label for="phone">Phone</label><p class="err">Enter a 10-digit phone number.</p></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset" id="address-set">
+          <legend>Shipping address</legend>
+          <div class="fields">
+            <div class="field full"><textarea id="address" name="address" placeholder=" " autocomplete="street-address" required></textarea><label for="address">House, street, area</label><p class="err">Please enter your address.</p></div>
+            <div class="field"><input id="city" name="city" placeholder=" " autocomplete="address-level2" required><label for="city">City</label><p class="err">Please enter your city.</p></div>
+            <div class="field"><input id="pin" name="pin" placeholder=" " inputmode="numeric" pattern="[0-9]{6}" autocomplete="postal-code" required><label for="pin">PIN code</label><p class="err">Enter a 6-digit PIN code.</p></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="fieldset">
+          <legend>Anything else?</legend>
+          <div class="fields"><div class="field full"><textarea id="notes" name="notes" placeholder=" "></textarea><label for="notes">Order notes (optional)</label></div></div>
+        </fieldset>
+
+        <button class="btn block press" type="submit" id="place-order"><span>Place order on WhatsApp</span><span class="arrow"><svg viewBox="0 0 24 24"><path d="M14 5.34c-.26 0-.51.1-.71.3l-.08.08a1 1 0 0 0 0 1.41L17.07 11H4a1 1 0 1 0 0 2h13.07l-3.86 3.86a1 1 0 0 0 0 1.42l.08.08a1 1 0 0 0 1.42 0l5.65-5.65a1 1 0 0 0 0-1.42l-5.65-5.65a1 1 0 0 0-.71-.3z"/></svg></span></button>
+      </form>
+
+      <aside class="summary" id="summary" aria-label="Order summary"></aside>
+    </div>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="assets/js/catalog.js"></script>
+  <script src="assets/js/store.js"></script>
+</body>
+</html>
